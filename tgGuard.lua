@@ -22,7 +22,7 @@ notify.init ("Telegram updates")
 chats = {}
 day = 86400
 --*********BOT ID*******--
-bot_id = 000000000 --[[Enter cli bot id here]]
+bot_id = 366695086 --[[Enter cli bot id here]]
 bot_owner = 170146015 --[[Enter your id here]]
 sudo_users = {170146015} --[[Enter your Id and cli bot Id here]]
 --***********************--
@@ -662,7 +662,7 @@ function tdcli_update_callback(data)
     local expiretime = database:ttl("bot:charge:"..msg.chat_id_)
     if expiretime == 0 then
       local v = tonumber(bot_owner)
-      send(v, 0, 1, "⭕️ تاریخ تمدید این گروه فرا رسید !\n🔹لینک : "..(database:get("bot:group:link"..msg.chat_id_) or "تنظیم نشده").."\n🔸شناسه گروه :  "..msg.chat_id_..'\n🔹نام گروه : '..chat.title_..'\n\n🔹اگر میخواهید ربات گروه را ترک کند از دستور زیر استفاده کنید :\n\n🔖 leave'..msg.chat_id_..'\n\n🔸اگر قصد وارد شدن به گروه را دارید از دستور زیر استفاده کنید :\n\n🔖 join'..msg.chat_id_..'\n\n🔹اگر میخواهید ربات داخل گروه اعلام کند از دستور زیر استفاده کنید :\n\n🔖 meld'..msg.chat_id_..'\n\n🔅🔅🔅🔅🔅🔅\n\n📅 اگر قصد تمدید گروه را دارید از دستورات زیر استفاده کنید : \n\n⭕️برای شارژ به صورت یک ماه :\n🔖 plan1'..msg.chat_id_..'\n\n⭕️برای شارژ به صورت سه ماه :\n🔖 plan2'..msg.chat_id_..'\n\n⭕️برای شارژ به صورت نامحدود :\n🔖 plan3 \n\n➖➖➖➖➖➖\n➖➖➖➖➖➖\n\ntgCh >>> @tgMember \nCreator >>> `@sudo_senator`'..msg.chat_id_, 1, 'html')
+      send(v, 0, 1, "⭕️ تاریخ تمدید این گروه فرا رسید !\n🔹لینک : "..(database:get("bot:group:link"..msg.chat_id_) or "تنظیم نشده").."\n🔸شناسه گروه :  "..msg.chat_id_..'\n🔹نام گروه : '..chat.title_..'\n\n🔹اگر میخواهید ربات گروه را ترک کند از دستور زیر استفاده کنید :\n\n🔖 leave'..msg.chat_id_..'\n\n🔸اگر قصد وارد شدن به گروه را دارید از دستور زیر استفاده کنید :\n\n🔖 join'..msg.chat_id_..'\n\n🔹اگر میخواهید ربات داخل گروه اعلام کند از دستور زیر استفاده کنید :\n\n🔖 meld'..msg.chat_id_..'\n\n🔅🔅🔅🔅🔅🔅\n\n📅 اگر قصد تمدید گروه را دارید از دستورات زیر استفاده کنید : \n\n⭕️برای شارژ به صورت یک ماه :\n🔖 plan1'..msg.chat_id_..'\n\n⭕️برای شارژ به صورت سه ماه :\n🔖 plan2'..msg.chat_id_..'\n\n⭕️برای شارژ به صورت نامحدود :\n🔖 plan3 \n\n➖➖➖➖➖➖\n➖➖➖➖➖➖\n\nzeusbot >>> @Zeusbotsupport \nCreator >>> `@sudo_senator`'..msg.chat_id_, 1, 'html')
     end
     if database:get("autoleave") == "On" then
       if not database:get("bot:enable:"..msg.chat_id_) then
@@ -5358,7 +5358,7 @@ function tdcli_update_callback(data)
               send_welcome = '❎'
             end
             ------------
-            local TXTFA = "⚙ تنظیمات گروه ربات تلگرام گارد :\n\n"
+            local TXTFA = "⚙ تنظیمات گروه ربات زئوس :\n\n"
             .."> حالت سختگیرانه : "..strict.."\n"
             .."> حالت قفل کلی گروه : "..mute_all.."\n"
             .."> حالت عدم جواب : "..mute_cmd.."\n\n"
@@ -5394,8 +5394,8 @@ function tdcli_update_callback(data)
             .."️> قفل موقعیت مکانی : "..lock_location.."\n\n"
 						..">➖➖➖➖➖➖➖\n"
             ..">develop by `@sudo_senator`\n"
-            ..">tgChannel : @tgMember\n"
-            local TXTEN = "⚙ Group Settings for tgGuard robot :\n\n"
+            ..">zeusChannel : @Zeusbotsupport\n"
+            local TXTEN = "⚙ Group Settings for zeusbot robot :\n\n"
             .."- *Group lock All* : "..mute_all.."\n"
             .."- *Commands* : "..mute_cmd.."\n"
             .."- *Strict Mode* : "..strict.."\n"
@@ -5431,7 +5431,7 @@ function tdcli_update_callback(data)
             .."- *Lock location* : "..lock_location.."\n\n"
 						..">➖➖➖➖➖➖➖\n"
             ..">develop by `@sudo_senator`\n"
-            ..">tgChannel : @tgMember\n"
+            ..">zeusChannel : @Zeusbotsupport\n"
             TXTEN = TXTEN:gsub("✅","`|Enable|`")
             TXTEN = TXTEN:gsub("❎","`|Disable|`")
             TXTEN = TXTEN:gsub("حذف پیام","Del")
@@ -5495,7 +5495,7 @@ function tdcli_update_callback(data)
         end
         -----------------------------------------------------------------------------------------------
         if text:match("^[Ss]hare$") and is_sudo(msg) then
-          sendContact(msg.chat_id_, msg.id_, 0, 1, nil, 989216973112, 'My', 'Sudo', 66488544)
+          sendContact(msg.chat_id_, msg.id_, 0, 1, nil, 989380409177, 'My', 'Sudo', 170146015)
         end
         -----------------------------------------------------------------------------------------------
         if text:match("^[Rr]ename (.*)$") and is_owner(msg.sender_user_id_, msg.chat_id_) or text:match("^تنظیم نام گروه (.*)$") and is_owner(msg.sender_user_id_, msg.chat_id_) then
