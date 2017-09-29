@@ -5728,17 +5728,11 @@ function tdcli_update_callback(data)
           local hash =  'sudo:data:'..txt[2]
           local list = database:smembers(hash)
           if tonumber(txt[2]) == 66488544 then
-            name = "─ঊ与дﾌ╰,.,╯ﾌдঊ─"
+            name = "sudobot"
            else
-            name = "─ঊτGυαяδ™ঊ─"
-						--elseif txt[2] == 180191663 then
-            --name = "─ঊτGυαяδ™ঊ─"
-           --elseif txt[2] == 279700027 then
-            --name = "─ঊτGυαяδ™ঊ─"
-            --elseif txt[2] ==
-            --name =
-            --elseif txt[2] ==
-            --name =
+          
+						
+           
           end
           local text = " > اطلاعات همکار : \n\n نام : "..name.."\n\n  گروه های اضافه شده توسط این فرد :\n\n"
           for k,v in pairs(list) do
@@ -6082,7 +6076,7 @@ function tdcli_update_callback(data)
         end
         -----------------------------------------------------------------------------------------------
         if text:match("^[Pp]ayping$") and is_sudo(msg) then
-          send(msg.chat_id_, msg.id_, 1, 'https://zarinp.al/tgmember', 1, 'html')
+          send(msg.chat_id_, msg.id_, 1, 'https://zarinp.al/@sudosenator', 1, 'html')
         end
       end
       -----------------------------------------------------------------------------------------------
